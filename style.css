@@ -3,3 +3,37 @@ table{
     border: 2px solid rgb(0, 204, 255);
     padding: 1em; 
 }
+
+caption{
+    padding: .5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.margin-top{
+    margin-top: 2em;
+}
+
+a, .a{
+    background: none;
+    margin: auto;
+    text-decoration: none;
+    color: rgb(255, 0, 55);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: .5em;
+    border: 2px solid rgb(0, 204, 255);
+    transition: all 400ms;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.a{
+    padding: .75em;
+    cursor: pointer;
+}
+
+a:hover{
+    border-color: orange;
+}
