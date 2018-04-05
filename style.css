@@ -1,7 +1,12 @@
+body{
+    background: #f8f8f8;
+}
+
 table{
     margin: auto;
     border: 2px solid rgb(0, 204, 255);
     padding: 1em; 
+    background: white;
 }
 
 caption{
@@ -11,7 +16,7 @@ caption{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.margin-top{
+.m-t{
     margin-top: 2em;
 }
 

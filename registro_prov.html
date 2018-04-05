@@ -4,64 +4,87 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <title>Proveedores</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            table{
+                margin: auto;
+                width: 80%;
+                border: 2px solid rgb(0, 204, 255);
+                padding: 1em; 
+                background: white;
+            }
+            input{
+                width: 100%;
+                padding: 1em;
+                box-sizing: border-box;
+            }
+        </style>
     </head>
     <body>
         <form action="" method="post">
             <table>
                 <caption>Registro de proveedor</caption>
                 <tr>
-                    <td>Nombre del empleado</td>
+                    <td>Nombre del proveedor</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="nombre">
                     </td>
                 </tr>
                 <tr>
                     <td>Direccion</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="dir">
                     </td>
                 </tr>
                 <tr>
                     <td>Telefono</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="tel" maxlength="10">
                     </td>
                 </tr>
                 <tr>
                     <td>Correo</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numero de cuenta</td>
+                    <td>
+                        <input type="text" name="num-c" maxlength="13">
                     </td>
                 </tr>
                 <tr>
                     <td>R.F.C</td>
                     <TD>
-                        <input type="text">
+                        <input type="text" name="rfc">
                     </TD>
                 </tr>
                 <tr>
                     <td>Razon Social</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="rs">
                     </td>
                 </tr>
                 <tr>
                     <td>Tipo de convenio</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="conv">
                     </td>
                 </tr>
                 <tr>
                     <td>Tipo de pago</td>
                     <td>
-                        <input type="text">
+                        <input type="text" name="pago">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="./inicio_rest.html">Regresar</a>
+                        <a href="../inicio_rest.html">Regresar</a>
                     </td>
                     <td>
                         <input type="submit" class="a" value="Enviar">

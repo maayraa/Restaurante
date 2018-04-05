@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puestos</title>
+    <style>
+            body{
+                background: #f8f8f8;
+            }
+            
+            table{
+                margin: auto;
+                width: 80%;
+                border: 2px solid rgb(0, 204, 255);
+                padding: 1em; 
+                background: white;
+            }
+            
+            caption{
+                padding: .5em;
+                font-size: 1.5em;
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            .m-t{
+                margin-top: 2em;
+            }
+            
+            a, .a{
+                background: none;
+                margin: auto;
+                text-decoration: none;
+                color: rgb(255, 0, 55);
+                font-weight: bold;
+                text-align: center;
+                display: block;
+                padding: .5em;
+                border: 2px solid rgb(0, 204, 255);
+                transition: all 400ms;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            
+            .a{
+                padding: .75em;
+                cursor: pointer;
+            }
+            
+            a:hover{
+                border-color: orange;
+            }
+            input{
+                width: 100%;
+                padding: 1em;
+                box-sizing: border-box;
+            }
+        </style>
+</head>
+<body>
+    <form action="./puestos.php" method="POST">
+        <table>
+            <caption>Registro de puestos</caption>
+            <tr>
+                <td>Puesto</td>
+                <td>
+                    <input type="text" name="puesto">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="./inicio_rest.html">Regresar</a>
+                </td>
+                <td>
+                    <input type="submit" value="Enviar" class="a">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
