@@ -1,8 +1,8 @@
 <?php
-    $host = 'localhost';
+    $host = '192.168.13.22';
 	$dbname = 'restaurante';
-	$user = 'root';
-	$pass = '';
+	$user = 'ingenieros';
+	$pass = 'Temporal';
 
 	try{
 		// MYSQL CON PDO

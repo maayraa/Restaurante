@@ -69,3 +69,7 @@ a:hover:before {
        float: right;
 
    }
+
+   .clear{
+       clear: both;
+   }
