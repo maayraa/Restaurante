@@ -1,10 +1,11 @@
 body{
-    background: #f8f8f8;
+    background: #FFEBCD;
+    
 }
 
 table{
     margin: auto;
-    border: 2px solid rgb(0, 204, 255);
+    border: 2px solid rgb(255, 0, 55);
     padding: 1em; 
     background: white;
 }
@@ -14,6 +15,7 @@ caption{
     font-size: 1.5em;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: Dimgrey; 
 }
 
 .m-t{
@@ -21,7 +23,7 @@ caption{
 }
 
 a, .a{
-    background: none;
+    background:none;
     margin: auto;
     text-decoration: none;
     color: rgb(255, 0, 55);
@@ -29,16 +31,41 @@ a, .a{
     text-align: center;
     display: block;
     padding: .5em;
-    border: 2px solid rgb(0, 204, 255);
+    border: 2px solid rgb(0, 255, 134);
     transition: all 400ms;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: .4em;
+
 }
 
 .a{
-    padding: .75em;
+    padding: 10px 35px;
     cursor: pointer;
 }
 
 a:hover{
     border-color: orange;
 }
+
+a:before{
+font-family: FontAwesome;
+ content: "*";
+ position: absolute;
+ top: 14px;
+ left:20px;
+ transition: all 200ms ease;
+}
+
+a:hover:before {
+    left: 7px;
+   }
+   
+   table{
+       background: salmon;
+   }
+
+   img{
+       width: 40px;
+       float: right;
+
+   }
