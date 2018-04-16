@@ -36,7 +36,7 @@
                             <option value="">Seleccionar</option>
                             <?php
                                 foreach ($ings as $ing) {
-                                    echo '<option value='.$ing['id_ingrend'].'></option>';
+                                    echo '<option value='.$ing['id_ingrend'].'>'.$ing['tipo'].'</option>';
                                 }
                             ?>
                         </select>

@@ -15,19 +15,19 @@
             <tr>
                 <td>Descripcion</td>
                 <td>
-                    <input type="uni">
+                    <input type="text" name=uni>
                 </td>
             </tr>
             <tr>
                 <td>Tipo</td>
                 <td>
-                    <input type="tipo">
+                    <input type="text" name=tipo>
                 </td>
             </tr>
             <tr>
                 <td>Costo</td>
                 <td>
-                    <input type="costo">
+                    <input type="text" name=costo>
                 </td>
             </tr>
             <tr>

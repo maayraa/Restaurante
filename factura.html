@@ -8,61 +8,55 @@
     <title>Factura</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="./servicios/facturas.php" method="post">
         <table>
             <caption>Factura</caption>
             <tr>
-                <td>Id de factura</td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
                 <td>Folio de comanda</td>
                 <td>
-                    <input type="text">
+                    <input type="text" name="fol">
                 </td>
             </tr>
             <tr>
                 <td>Fecha</td>
                 <td>
-                    <input type="date">
+                    <input type="date" name="fecha">
                 </td>
             </tr>
             <tr>
                 <td>R.F.C</td>
                 <td>
-                    <input type="text" maxlength="13">
+                    <input type="text" maxlength="13" name="rfc"
                 </td>
             </tr>
             <tr>
                 <td>Codigo Postal</td>
                 <td>
-                    <input type="text" maxlength="5">
+                    <input type="text" maxlength="5" name="cp">
                 </td>
             </tr>
             <tr>
                 <td>Razon social</td>
                 <td>
-                    <input type="text" maxlength="20">
+                    <input type="text" maxlength="20" name="raz"
                 </td>
             </tr>
             <tr>
                 <td>Subtotal</td>
                 <td>
-                    <input type="text">
+                    <input type="text" name="sub">
                 </td>
             </tr>
             <tr>
                 <td>IVA</td>
                 <td>
-                    <input type="text">
+                    <input type="text" name="iva">
                 </td>
             </tr>
             <tr>
                 <td>Total</td>
                 <td>
-                    <input type="text">
+                    <input type="text" name="tot">
                 </td>
             </tr>
             <tr>
