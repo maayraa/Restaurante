@@ -6,31 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../style.css">
         <title>Platillos</title>
-        <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            table{
-                margin: auto;
-                width: 80%;
-                border: 2px solid rgb(0, 204, 255);
-                padding: 1em; 
-                background: white;
-            }
-            input{
-                width: 100%;
-                padding: 1em;
-                box-sizing: border-box;
-            }
-            textarea{
-                width: 100%;
-                box-sizing: border-box;
-            }
-    
-            select{
-                padding: 1em;
-            }
-        </style>
+       
     </head>
     <body>
         <form action="./platillo.php" method="post">
@@ -54,13 +30,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>id Ingrediente:</td>
+                    <td>Id Ingrediente:</td>
                     <td>
                         <select name="ing" >
                             <option value="">Seleccionar</option>
                             <?php
                                 foreach ($ings as $ing) {
-                                    echo '<option value='.$ing['id_ing'].'></option>';
+                                    echo '<option value='.$ing['id_ingrend'].'></option>';
                                 }
                             ?>
                         </select>

@@ -6,31 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
     <title>Almacen</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        table{
-            margin: auto;
-            width: 80%;
-            border: 2px solid rgb(0, 204, 255);
-            padding: 1em; 
-            background: white;
-        }
-        input{
-            width: 100%;
-            padding: 1em;
-            box-sizing: border-box;
-        }
-        textarea{
-            width: 100%;
-            box-sizing: border-box;
-        }
 
-        select{
-            padding: 1em;
-        }
-    </style>
 </head>
 <body>
     <form action="./almacen.php" method="post">
