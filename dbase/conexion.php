@@ -3,7 +3,8 @@
 	$dbname = 'restaurante';
 	$user = 'root';
 	$pass = '';
-
+	define('RUTA', 'http://localhost/restaurante/');
+	
 	try{
 		// MYSQL CON PDO
 		$pdo = new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $user, $pass);

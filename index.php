@@ -1,2 +1,2 @@
 <?php
-    require_once 'inicio_rest.html';
+    require_once 'login.php';
