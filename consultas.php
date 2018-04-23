@@ -28,6 +28,7 @@
                 <td><b>R.F.C</b></td>
                 <td><b>Domicilio</b></td>
                 <td><b>Curp</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
             }
         ?>
@@ -59,6 +60,7 @@
                     echo '<td>';
                     echo $emp['curp_emp'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=empleados&id=".$emp['id_emp']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -410,6 +412,7 @@
                 <td><b>Descripcion</b></td>
                 <td><b>Tipo</b></td>
                 <td><b>Costo</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($ingrediente as $ing) {
@@ -426,6 +429,7 @@
                     echo '<td>';
                     echo $ing['costo'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=ingredientes&id=".$ing['id_ingrend']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
