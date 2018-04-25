@@ -3,7 +3,8 @@
 	include_once '../dbase/conexion.php';
 	include_once '../dbase/funciones.php';
 
-	$emp = getDataBase('empleados', $pdo);
+    $emp = getDataBase('empleados', $pdo);
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $idemp = $_POST['id_emp'];
         $periodo = $_POST['periodo'];
@@ -18,12 +19,12 @@
         $totd = $_POST['total_d'];
         $totp = $_POST['total_p'];
 		
-        $statement = $pdo->prepare("INSERT INTO nomina(id_emp, periodo, descr, sal_dro, dias_trb, cmson, hrs_extr, seg_soc, infonavit, credito, total_d, total_p) VALUES (:idemp, :periodo, :descr, :sal_dro, :dias_trb, :cmson, :hrs_esxtr, :seg_soc, :infonavit, :credito, :total_d, :total_p)");
+        $statement = $pdo->prepare("INSERT INTO nomina(id_emp, horas_ext, periodo, descr, sal_dro, dias_trb, cmson, seg_soc, infonavit, credito, total_d, total_p) VALUES (:idemp, :periodo, :descr, :sal_dro, :dias_trb, :cmson, :hrs_extr, :seg_soc, :infonavit, :credito, :total_d, :total_p)");
         $statement->execute([
             ':idemp' => $idemp,
             ':periodo' => $periodo,
             ':descr' => $descr,
-            ':sal_sro'=> $sal,
+            ':sal_dro'=> $sal,
             ':dias_trb' => $dias,
 			':cmson' => $cmson,
 			':hrs_extr' => $horas,
@@ -32,7 +33,6 @@
 			':credito' => $credito,
 			':total_d'=> $totd,
             ':total_p' => $totp
-			
         ]);
     
     }
