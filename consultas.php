@@ -257,9 +257,17 @@
                 <tr>
                 <td><b>Id de nomina</b></td>
                 <td><b>Id del empleado</b></td>
-                <td><b>Ddeduccion</b></td>
-                <td><b>Percepcion</b></td>
-                <td><b>Horas extras</b></td>
+                <td><b>Horas Extras</b></td>
+                <td><b>Periodo</b></td>
+                <td><b>Descripcion</b></td>
+                <td><b>Salario diario</b></td>
+                <td><b>Dias trabajados</b></td>
+                <td><b>Comisiones</b></td>
+                <td><b>Seguro soscial</b></td>
+                <td><b>Infonavit</b></td>
+                <td><b>Credito</b></td>
+                <td><b>Total de deduccion</b></td>
+                <td><b>Total de percepcion</b></td>
                 <td><b>Accion</b></td>
                 </tr>';
                 
@@ -272,15 +280,39 @@
                     echo $nomi['id_emp'];
                     echo '</td>';
                     echo '<td>';
-                    echo $nomi['deduccion'];
-                    echo '</td>';
-                    echo '<td>';
-                    echo $nomi['percepciom'];
-                    echo '</td>';
-                    echo '<td>';
                     echo $nomi['horas_ext'];
                     echo '</td>';
-                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=nomina&id=".$emp['id_nomi']."'>Eliminar</a></td>";
+                    echo '<td>';
+                    echo $nomi['periodo'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['descr'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['sal_dro'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['dias_trb'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['cmson'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['seg_soc'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['infonavit'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['credito'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['total_d'];
+                    echo '</td>';
+                    echo '<td>';
+                    echo $nomi['total_p'];
+                    echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=nomina&id=".$nomi['id_nomi']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
                     
