@@ -1,9 +1,9 @@
 <?php
-    $host = 'localhost';
+    $host = '192.168.12.81';
 	$dbname = 'restaurante';
-	$user = 'root';
-	$pass = '';
-	define('RUTA', 'http://localhost/restaurante/');
+	$user = 'ingenieros';
+	$pass = 'Temporal';
+	define('RUTA', 'http://192.168.12.81/restaurante/');
 	
 	try{
 		// MYSQL CON PDO
