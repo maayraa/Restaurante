@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,13 @@
             <tr>
                 <td>Folio de comanda</td>
                 <td>
-                    <input type="text" name="fol">
+                    <select name="fol">
+                        <?php
+                                foreach ($comandas as $com) {
+                                    echo '<option value="'.$com['fol_coman'].'">'.$com['id_plat'].'</option>';
+                                }
+                        ?>
+                        </select>
                 </td>
             </tr>
             <tr>
@@ -44,7 +51,13 @@
             <tr>
                 <td>Subtotal</td>
                 <td>
-                    <input type="text" name="sub">
+                        <select name="sub">
+                        <?php
+                                foreach ($comandas as $com) {
+                                    echo '<option value="'.$com['fol_coman'].'">'.$com['prec'].'</option>';
+                                }
+                        ?>
+                        </select>
                 </td>
             </tr>
             <tr>
@@ -69,5 +82,13 @@
             </tr>
         </table>
     </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () { 
+			$('.mas').click(function(){
+				$('.mas').before('<input type="text" name="array[]" class="input-mas">');
+			});
+		});
+	</script>
 </body>
 </html>

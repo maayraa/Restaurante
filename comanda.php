@@ -15,7 +15,7 @@
 			<tr>
 				<td>Cliente</td>
 				<td>
-					<select name="cliente" id="">
+					<select name="id_clte">
 						<?php
 							foreach ($clientes as $cliente) {
 								echo '<option value="'.$cliente['id_clte'].'">'.$cliente['nom_comp'].'</option>';
@@ -27,7 +27,7 @@
 			<tr>    
 				<td>Platillo</td>
 				<td>
-					<select name="" id="">
+					<select name="id_plat">
 						<?php
 							foreach ($platillos as $platillo) {
 								echo '<option value="'.$platillo['id_plat'].'">'.$platillo['presen'].'</option>';
@@ -39,51 +39,55 @@
 			<tr>
 				<td>Bebida</td>
 				<td>
-					<input type="text">
+					<input type="text" name="bebida">
 				</td>
 			</tr>
 			<tr>
 				<td>Descripcion</td>
 				<td>
-					<input type="text">
+					<input type="text" name="descr">
 				</td>
 			</tr>
 			<tr>
 				<td>Cantidad</td>
 				<td>
-					<input type="text">
+					<input type="text" name="cant">
 				</td>
 			</tr>
 			<tr>
 				<td>Precio</td>
 				<td>
-					<input type="text">
+					<input type="text" name="prec">
 				</td>
 			</tr>
 			<tr>
 				<td>Numero de mesa</td>
 				<td>
-					<input type="text">
+					<input type="text" name="num_mesa">
 				</td>
 			</tr>
 			<tr>
 				<td>Fecha</td>
 				<td>
-					<input type="date" name="" id="">
+					<input type="date" name="fecha">
 				</td>
 			</tr>
 			<tr>
 				<td>Nombre de empleado</td>
 				<td>
-					<select name="" id="">
-						<option value="">Seleccionar</option>
+					<select name="nom_emp" id="">
+					<?php
+							foreach ($empleado as $emp) {
+								echo '<option value="'.$emp['id_emp'].'">'.$emp['nom_emp'].'</option>';
+							}
+					?>
 					</select>
 				</td>
 			</tr>
 			<tr>
 				<td>Nota de venta</td>
 				<td>
-					<input type="text">
+					<input type="text" name="nota_venta">
 				</td>
 			</tr>
 			<tr>

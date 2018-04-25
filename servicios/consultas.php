@@ -42,20 +42,26 @@
             $factura = $statement;
         break;
         case 'comanda';
-        $statement =$pdo->prepare("SELECT * FROM comanda" );
-        $statement->execute();
-        $comanda = $statement;
+            $statement =$pdo->prepare("SELECT * FROM comanda" );
+            $statement->execute();
+            $comanda = $statement;
         break;
         case 'ingredientes';
-        $statement =$pdo->prepare("SELECT * FROM ingredientes" );
-        $statement->execute();
-        $ingrediente = $statement;
+            $statement =$pdo->prepare("SELECT * FROM ingredientes" );
+            $statement->execute();
+            $ingrediente = $statement;
         break;
         case 'nota_venta';
-        $statement =$pdo->prepare("SELECT * FROM nota_venta" );
-        $statement->execute();
-        $nota = $statement;
+            $statement =$pdo->prepare("SELECT * FROM nota_venta" );
+            $statement->execute();
+            $nota = $statement;
         break;
+        case 'almacen';
+            $statement =$pdo->prepare("SELECT * FROM almacen" );
+            $statement->execute();
+            $almacen = $statement;
+        break;
+
 
         default:
     }

@@ -1,5 +1,9 @@
 <?php
-require_once '../dbase/conexion.php';
+include_once '../dbase/conexion.php';
+include_once '../dbase/funciones.php';
+
+$comandas = getDataBase('comanda', $pdo);
+    
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $folio = $_POST['fol'];
@@ -26,4 +30,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 
-require_once '../factura.html';
+    $statement = $pdo->prepare('SELECT * FROM comanda');
+	$statement->execute();
+    $comandas = $statement;
+    
+    require_once '../factura.php';

@@ -10,6 +10,27 @@
         td{
             padding: .5em;
         }
+        a{
+                /* position: relative; */
+    width: 120px;
+    height: 20px;
+    background: #fff;
+    padding-top: 6px;
+    /* margin-top: 10px; */
+    -webkit-border-radius: 38px;
+    -moz-border-radius: 38px;
+    border-radius: 28px;
+    -webkit-box-shadow: inset 0 1px 2px #000, 0px 1px 1px rgba(255,255,225,0.2);
+    -moz-box-shadow: inset 0 1px 2px #000, 0px 1px 1px rgba(255,255,225,0.2);
+    box-shadow: inset 0 1px 2px #000, 0px 1px 0px rgba(255,255,225,0.3);
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+    padding: .5em;
+    margin-top: em;
+        }
     </style>
 </head>
 <body>
@@ -79,6 +100,7 @@
                 <td><b>Razon social</b></td>
                 <td><b>telefono</b></td>
                 <td><b>Codigo Postal</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 foreach ($clientes as $cte) {
                     echo '<tr>';
@@ -103,6 +125,7 @@
                     echo '<td>';
                     echo $cte['cp'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=cliente&id=".$cte['id_clte']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -115,6 +138,7 @@
                 <tr>
                 <td><b>Id de puesto</b></td>
                 <td><b>Puesto</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($puestos as $puesto) {
@@ -125,6 +149,7 @@
                     echo '<td>';
                     echo $puesto['puesto'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=puestos&id=".$puesto['id_puesto']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -145,6 +170,7 @@
                 <td><b>Razon social</b></td>
                 <td><b>Tipo de convenio</b></td>
                 <td><b>Tipo de pago</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($proveedor as $pro) {
@@ -179,6 +205,7 @@
                     echo '<td>';
                     echo $pro['tipo_pago'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=proveedores&id=".$pro['id_prov']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -194,6 +221,7 @@
                 <td><b>Precio</b></td>
                 <td><b>Descripcion</b></td>
                 <td><b>Id de ingrediente</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($platillo as $plat) {
@@ -211,8 +239,9 @@
                     echo $plat['descr'];
                     echo '</td>';
                     echo '<td>';
-                    echo $pro['id_ingred'];
+                    echo $plat['id_ingred'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=platillo&id=".$plat['id_plat']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -231,6 +260,7 @@
                 <td><b>Ddeduccion</b></td>
                 <td><b>Percepcion</b></td>
                 <td><b>Horas extras</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($nomina as $nomi) {
@@ -250,8 +280,10 @@
                     echo '<td>';
                     echo $nomi['horas_ext'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=nomina&id=".$emp['id_nomi']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
+                    
             }
         ?>
              <?php
@@ -266,31 +298,33 @@
                 <td><b>Ingrediente</b></td>
                 <td><b>Fecha</b></td>
                 <td><b>Estatus</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
-                foreach ($alamcen as $alm) {
+                foreach ($almacen as $alm) {
                     echo '<tr>';
                     echo '<td>';
                     echo $alm['num_entr'];
                     echo '</td>';
                     echo '<td>';
-                    echo $nomi['id_prov'];
+                    echo $alm['id_prov'];
                     echo '</td>';
                     echo '<td>';
-                    echo $nomi['id_emp'];
+                    echo $alm['id_emp'];
                     echo '</td>';
                     echo '<td>';
-                    echo $nomi['descr'];
+                    echo $alm['descr'];
                     echo '</td>';
                     echo '<td>';
-                    echo $nomi['ingrend'];
+                    echo $alm['ingrend'];
                     echo '</td>';
-                    echo '</tr>';
-                    echo $nomi['fecha'];
+                    echo '<td>';
+                    echo $alm['fecha'];
                     echo '</td>';
-                    echo '</tr>';
-                    echo $nomi['estatus'];
+                    echo '<td>';
+                    echo $alm['estatus'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=almacen&id=".$alm['num_entr']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -310,6 +344,7 @@
                 <td><b>Subtotal</b></td>
                 <td><b>IVA</b></td>
                 <td><b>Total</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($factura as $fac) {
@@ -341,6 +376,7 @@
                     echo '</tr>';
                     echo $fac['total'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=factura&id=".$fac['id_fact']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -362,6 +398,7 @@
                 <td><b>Fecha</b></td>
                 <td><b>Nombre de empleado</b></td>
                 <td><b>Nota de venta</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($comanda as $com) {
@@ -381,24 +418,25 @@
                     echo '<td>';
                     echo $com['descr'];
                     echo '</td>';
-                    echo '</tr>';
+                    echo '<td>';
                     echo $com['cant'];
                     echo '</td>';
-                    echo '</tr>';
+                    echo '<td>';
                     echo $com['prec'];
                     echo '</td>';
-                    echo '</tr>';
+                    echo '<td>';
                     echo $com['num_mesa'];
                     echo '</td>';
-                    echo '</tr>';
+                    echo '<td>';
                     echo $com['fecha'];
                     echo '</td>';
-                    echo '</tr>';
+                    echo '<td>';
                     echo $com['nom_emp'];
                     echo '</td>';
-                    echo '</tr>';
+                    echo '<td>';
                     echo $com['nota_venta'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=comanda&id=".$com['fol_coman']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
@@ -442,8 +480,9 @@
                 <tr>
                 <td><b>Subtotal</b></td>
                 <td><b>Total</b></td>
-                <td><b>Folio de comanda/b></td>
+                <td><b>Folio de comanda</b></td>
                 <td><b>Detalle de venta</b></td>
+                <td><b>Accion</b></td>
                 </tr>';
                 
                 foreach ($nota as $not) {
@@ -460,11 +499,13 @@
                     echo '<td>';
                     echo $not['deta_venta'];
                     echo '</td>';
+                    echo "<td><a href='".RUTA."servicios/eliminar.php?tabla=nota_venta&id=".$not['fol_coman']."'>Eliminar</a></td>";
                     echo '</tr>';
                 }
             }
         ?>
 
     </table>
+    <a href="../consultas.html"><img src="">Regresar</a>
 </body>
 </html>
