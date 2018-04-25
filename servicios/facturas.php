@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $total = $_POST['tot'];
     
 
-    $statement = $pdo->prepare("INSERT INTO factura(fol_coman, fecha, rfc, cp, raz_soc, subtot, iva, total) VALUES(:id_fact, :fol, :fecha, :rfc, :cp, :raz_soc, :subtot, :iva, :total )");
+    $statement = $pdo->prepare("INSERT INTO factura(fol_coman, fecha, rfc, cp, raz_soc, subtot, iva, total) VALUES(:fol, :fecha, :rfc, :cp, :raz_soc, :subtot, :iva, :total)");
     $statement->execute([
         ':fol' => $folio,
         ':fecha' => $fecha,
@@ -30,8 +30,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 
-    $statement = $pdo->prepare('SELECT * FROM comanda');
-	$statement->execute();
-    $comandas = $statement;
+    // $statement = $pdo->prepare('SELECT * FROM comanda');
+	// $statement->execute();
+    // $comandas = $statement;
     
     require_once '../factura.php';

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="../estilos/style.css">
     <title>Factura</title>
 </head>
 <body>
-    <form action="./servicios/facturas.php" method="post">
+    <form action="./facturas.php" method="post">
         <table>
             <caption>Factura</caption>
             <tr>
@@ -45,7 +45,7 @@
             <tr>
                 <td>Razon social</td>
                 <td>
-                    <input type="text" maxlength="20" name="raz"
+                    <input type="text" maxlength="30" name="raz"
                 </td>
             </tr>
             <tr>
@@ -53,6 +53,9 @@
                 <td>
                         <select name="sub">
                         <?php
+                                $statement = $pdo->prepare('SELECT * FROM comanda');
+                                $statement->execute();
+                                $comandas = $statement;
                                 foreach ($comandas as $com) {
                                     echo '<option value="'.$com['fol_coman'].'">'.$com['prec'].'</option>';
                                 }
@@ -74,7 +77,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="./inicio_rest.html">Regresar</a>
+                    <a href="../inicio_rest.html">Regresar</a>
                 </td>
                 <td>
                     <input type="submit" class="a" value="Enviar">

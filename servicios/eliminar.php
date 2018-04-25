@@ -242,15 +242,15 @@ switch ($tabla) {
 					</div>
 				</form>';
 				   break;
-				case 'nota_venta':
-					echo '<form class="form-horizontal" action="eliminar.php?tabla=nota_venta&id='.$id.'" method="post">
-					<input type="hidden" name="idtabla" value="'.$id.'?>"/>
-					<p class="alert alert-error">¿Deseas eliminarlo?</p>
-					<div class="form-actions">
-						<button type="submit" class="btn btn-danger">Yes</button>
-						<a class="btn" href="consultas.php?con=nota_venta">No</a>
-					</div>
-				</form>';
+				   case 'nota_venta':
+				   echo '<form class="form-horizontal" action="eliminar.php?tabla=nota_venta&id='.$id.'" method="post">
+				   <input type="hidden" name="idtabla" value="'.$id.'?>"/>
+				   <p class="alert alert-error">¿Deseas eliminarlo?</p>
+				   <div class="form-actions">
+					   <button type="submit" class="btn btn-danger">Yes</button>
+					   <a class="btn" href="consultas.php?con=nota_venta">No</a>
+				   </div>
+			   </form>';
 				   break;
 
 				default:

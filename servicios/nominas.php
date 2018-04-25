@@ -18,7 +18,7 @@
         $totd = $_POST['total_d'];
         $totp = $_POST['total_p'];
 		
-        $statement = $pdo->prepare("INSERT INTO nomina(id_emp, periodo, descr, sal_dro, dias_trb, cmson, hrs_extr, seg_soc, infonavit, credito, total_d, total_p ) VALUES (:idemp, :periodo, :descr, :sal_dro, :dias_trb, :cmson, :hrs_esxtr, :seg_soc, :infonavit, :credito, total_d, total_p)");
+        $statement = $pdo->prepare("INSERT INTO nomina(id_emp, periodo, descr, sal_dro, dias_trb, cmson, hrs_extr, seg_soc, infonavit, credito, total_d, total_p) VALUES (:idemp, :periodo, :descr, :sal_dro, :dias_trb, :cmson, :hrs_esxtr, :seg_soc, :infonavit, :credito, :total_d, :total_p)");
         $statement->execute([
             ':idemp' => $idemp,
             ':periodo' => $periodo,

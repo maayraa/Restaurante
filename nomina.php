@@ -18,7 +18,7 @@
 					<select name="id_emp">
 						<?php
 							foreach ($emp as $emps) {
-								echo '<option value="'.$emps['id_emp'].'">'.$emps['nom_comp'].'</option>';
+								echo '<option value="'.$emps['id_emp'].'">'.$emps['nom_emp'].'</option>';
 							}
 						?>
 					</select>
@@ -27,7 +27,7 @@
 			<tr>    
 				<td>Periodo</td>
 				<td>
-					<input type="text" name="periodo">
+					<input type="date" name="periodo">
 				</td>
 			</tr>
 			<tr>
@@ -63,7 +63,7 @@
 			<tr>
 				<td>Seguro social</td>
 				<td>
-					<input type="date" name="seg_soc">
+					<input type="text" name="seg_soc">
 				</td>
 			</tr>
 			<tr>
